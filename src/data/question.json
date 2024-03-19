@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "question": "What is JSX in React?",
+      "options": ["JavaScript XML", "JavaScript Syntax Extension", "JavaScript and XML", "Java XML"],
+      "answer": 1,
+      "points": 10
+    },
+    {
+      "question": "What is React?",
+      "options": [
+        "A JavaScript library for building user interfaces",
+        "A CSS framework",
+        "A server-side framework",
+        "A database management system"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What are props in React?",
+      "options": [
+        "Properties that are immutable",
+        "Properties that are mutable",
+        "Properties that are required to be declared",
+        "Properties passed from parent component to child component"
+      ],
+      "answer": 3,
+      "points": 10
+    },
+    {
+      "question": "What is the virtual DOM in React?",
+      "options": [
+        "A virtual representation of the actual DOM",
+        "A separate DOM created for each React component",
+        "A concept unrelated to React",
+        "A browser feature"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is state in React?",
+      "options": [
+        "An object that holds properties",
+        "An internal data store (object) of a component",
+        "A static data structure",
+        "A component's HTML representation"
+      ],
+      "answer": 1,
+      "points": 10
+    },
+    {
+      "question": "What is a React component?",
+      "options": [
+        "A function or class that optionally accepts inputs and returns a React element",
+        "A static HTML element",
+        "A variable",
+        "A JavaScript object"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of useEffect() in React?",
+      "options": [
+        "To perform side effects in function components",
+        "To update the component's state",
+        "To create a new component",
+        "To render JSX"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of useState() in React?",
+      "options": [
+        "To render a component",
+        "To handle asynchronous operations",
+        "To manage state in function components",
+        "To create a new state"
+      ],
+      "answer": 2,
+      "points": 10
+    },
+    {
+      "question": "What is a higher-order component (HOC) in React?",
+      "options": [
+        "A component with a higher index in the component tree",
+        "A function that takes a component and returns a new component",
+        "A component with more features than others",
+        "A component with complex logic"
+      ],
+      "answer": 1,
+      "points": 10
+    },
+    {
+      "question": "What are React hooks?",
+      "options": [
+        "Functions that let you use state and other React features without writing a class",
+        "Helper functions for styling components",
+        "Functions for handling HTTP requests",
+        "Functions for managing browser history"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the useMemo() hook in React?",
+      "options": [
+        "To perform memoization of expensive calculations",
+        "To create a new component",
+        "To handle user input",
+        "To update the DOM"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is React Router?",
+      "options": [
+        "A library for managing browser history in React applications",
+        "A library for creating CSS transitions",
+        "A state management library",
+        "A database management library"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the useContext() hook in React?",
+      "options": [
+        "To manage context in function components",
+        "To handle user authentication",
+        "To manage application state",
+        "To update the DOM"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the useRef() hook in React?",
+      "options": [
+        "To reference a DOM element",
+        "To fetch data from an external API",
+        "To update the component's state",
+        "To create a new component"
+      ],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the useCallback() hook in React?",
+      "options": [
+        "To memoize functions",
+        "To handle user input",
+        "To update the component's state",
+        "To manage application state"
+      ],
+      "answer": 0,
+      "points": 10
+    }
+  ]
+}
