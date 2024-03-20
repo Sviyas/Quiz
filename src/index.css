@@ -17,16 +17,17 @@
 }
 
 /* ? question container  */
-.container-q {
-  width: 550px;
-  height: 300px;
+.container-q,
+.quest-container {
+  width: 600px;
+  height: 400px;
   color: #fff;
   background-color: #ffffff24;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   border-radius: 20px;
 }
 
@@ -34,7 +35,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  font-size: 28px;
+  font-size: 23px;
 }
 
 .btn-st {
@@ -46,5 +47,78 @@
 }
 
 .btn-st:hover {
+  background-color: #ffffff24;
+  cursor: pointer;
+}
+
+/* ? question  */
+
+.quest {
+  font-size: 25px;
+  text-wrap: nowrap;
+}
+
+.opt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-opt {
+  width: 400px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #ffffff24;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn-opt:hover {
+  cursor: pointer;
+}
+
+.answer {
+  margin-left: 30px;
+}
+
+.correct {
+  background-color: #00bfff;
+  color: black;
+}
+
+.wrong {
+  background-color: #ffa400;
+  color: black;
+}
+
+.correct:hover,
+.wrong:hover {
+  cursor: not-allowed;
+}
+/* ? progress bar */
+.progress {
+  width: 70%;
+  height: 30px;
+}
+
+/* ? footer container */
+.foot-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 220px;
+}
+
+.foot-c > button {
+  padding: 10px 40px;
+  border-radius: 30px;
+  background-color: #ffffff24;
+  border: none;
+  color: #fff;
+}
+
+.foot-c > button:hover {
   cursor: pointer;
 }

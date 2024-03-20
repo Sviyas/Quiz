@@ -4,7 +4,7 @@ const getQuizQuestionsData = async () => {
 
     return await data.json();
   } catch (error) {
-    console.log(error);
+    console.log('failed to fetching the data :', error);
     throw new Error(error.message);
   }
 };
