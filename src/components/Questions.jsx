@@ -1,5 +1,4 @@
 import Options from './OptionsList';
-// import Footer from './footer';
 
 function Questions({ quest, answer, dispatch }) {
   return (

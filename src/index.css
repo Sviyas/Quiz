@@ -122,3 +122,9 @@
 .foot-c > button:hover {
   cursor: pointer;
 }
+
+/* ? quiz finished */
+.quiz-fh {
+  padding: 30px;
+  background-color: #ffffff24;
+}

@@ -1,6 +1,6 @@
 export default function FinishQuiz() {
   return (
-    <div>
+    <div className='quiz-fh'>
       You&apos;re Score is <span>X</span>
     </div>
   );

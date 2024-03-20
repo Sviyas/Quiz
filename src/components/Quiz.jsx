@@ -59,10 +59,10 @@ function reducer(state, action) {
         answer: null
       };
 
-    case 'finished':
+    case 'finish':
       return {
         ...state,
-        answer: state.answer
+        status: 'finished'
       };
 
     default:
@@ -94,8 +94,6 @@ export default function Quiz() {
         {status === 'active' && (
           <>
             <Questions quest={questions[index]} answer={answer} dispatch={dispatch} />
-            {/* <Options  /> */}
-            {/* <Options option={questions?.options} answer={answer} dispatch={dispatch} /> */}
             <Footer answer={answer} dispatch={dispatch} index={index} numOfQuestions={numOfQuestions} />
           </>
         )}
