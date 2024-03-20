@@ -6,7 +6,6 @@ export default function Footer({ answer, dispatch, numOfQuestions, index }) {
   if (index < numOfQuestions - 1) {
     return (
       <div className='foot-c'>
-        <span>00:00</span>
         <button type='button' onClick={() => dispatch({ type: 'nextQuestion' })}>
           Next
         </button>
@@ -17,7 +16,6 @@ export default function Footer({ answer, dispatch, numOfQuestions, index }) {
   if (index === numOfQuestions - 1) {
     return (
       <div className='foot-c'>
-        <span>00:00</span>
         <button type='button' onClick={() => dispatch({ type: 'finish' })}>
           Finish
         </button>

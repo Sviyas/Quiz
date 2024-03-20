@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import Header from './Header';
 import '../App.css';
 import Main from './Main';
@@ -7,8 +8,10 @@ import Loader from './loaders';
 import Error from './ErrorrLoader';
 import StartQz from './StartQuiz';
 import Questions from './Questions';
-import FinishQuiz from './finished';
 import Footer from './footer';
+import Progress from './progress';
+import FinishGameQuiz from './finishGame';
+// import FinishQuiz from './finished';
 
 // ? status : loading, error , ready, active, finished,
 const initialState = {
@@ -16,7 +19,8 @@ const initialState = {
   status: 'loading',
   points: 0,
   index: 0,
-  answer: null
+  answer: null,
+  highscore: 0
 };
 
 /**
@@ -47,9 +51,13 @@ function reducer(state, action) {
       };
 
     case 'newAnswer':
+      const questions = state.questions.at(state.index);
+      const updatedAnswers = questions.answer === action.payload ? state.points + questions.points : state.points;
+
       return {
         ...state,
-        answer: action.payload
+        answer: action.payload,
+        points: updatedAnswers
       };
 
     case 'nextQuestion':
@@ -62,7 +70,16 @@ function reducer(state, action) {
     case 'finish':
       return {
         ...state,
-        status: 'finished'
+        status: 'finished',
+        highscore: state.points > state.highscore ? state.points : state.highscore
+      };
+
+    case 'restart':
+      console.log(state.questions);
+      return {
+        ...initialState,
+        questions: state.questions,
+        status: 'ready'
       };
 
     default:
@@ -71,11 +88,13 @@ function reducer(state, action) {
 }
 
 export default function Quiz() {
-  const [{ questions, status, index, answer }, dispatch] = useReducer(reducer, initialState);
+  const [{ questions, status, index, answer, points }, dispatch] = useReducer(reducer, initialState);
 
   const numOfQuestions = questions?.length;
 
   console.log('current status is : ', status);
+  console.log('points is : ', points);
+  console.log('questions is : ', questions);
 
   // ? store the data into - reduce state
   useEffect(() => {
@@ -92,13 +111,14 @@ export default function Quiz() {
         {status === 'error' && <Error />}
         {status === 'ready' && <StartQz numquestion={numOfQuestions} onShowQuest={dispatch} />}
         {status === 'active' && (
-          <>
+          <div className='container'>
+            <Progress num={numOfQuestions} index={index} points={points} answer={answer} />
             <Questions quest={questions[index]} answer={answer} dispatch={dispatch} />
             <Footer answer={answer} dispatch={dispatch} index={index} numOfQuestions={numOfQuestions} />
-          </>
+          </div>
         )}
 
-        {status === 'finished' && <FinishQuiz />}
+        {status === 'finished' && <FinishGameQuiz points={points} dispatch={dispatch} />}
       </Main>
     </div>
   );
